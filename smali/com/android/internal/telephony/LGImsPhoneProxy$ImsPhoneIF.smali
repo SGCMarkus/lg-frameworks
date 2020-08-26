@@ -2871,7 +2871,15 @@
 
     move-result v3
 
-    invoke-direct {p0, v1, v3}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    const v4, true
+    if-eq v3, v4, :cond_10
+    const v5, 0
+    invoke-direct {p0, v1, v5}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    goto :goto_10
+    :cond_10
+    const v5, 1
+    invoke-direct {p0, v1, v5}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    :goto_10
 
     .line 2210
     :cond_1
@@ -2915,7 +2923,15 @@
 
     move-result v3
 
-    invoke-direct {p0, v1, v3}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    const v4, true
+    if-eq v3, v4, :cond_11
+    const v5, 0
+    invoke-direct {p0, v1, v5}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    goto :goto_11
+    :cond_11
+    const v5, 1
+    invoke-direct {p0, v1, v5}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    :goto_11
 
     .line 2217
     :cond_3
@@ -2959,7 +2975,15 @@
 
     move-result v3
 
-    invoke-direct {p0, v1, v3}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    const v4, true
+    if-eq v3, v4, :cond_12
+    const v5, 0
+    invoke-direct {p0, v1, v5}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    goto :goto_12
+    :cond_12
+    const v5, 1
+    invoke-direct {p0, v1, v5}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    :goto_12
 
     .line 2224
     :cond_5
@@ -3005,7 +3029,15 @@
     move-result v2
 
     .line 2228
-    invoke-direct {p0, v1, v2}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    const v4, true
+    if-eq v3, v4, :cond_13
+    const v5, 0
+    invoke-direct {p0, v1, v5}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    goto :goto_13
+    :cond_13
+    const v5, 1
+    invoke-direct {p0, v1, v5}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    :goto_13
 
     .line 2231
     :cond_7
@@ -3056,7 +3088,15 @@
 
     move-result v2
 
-    invoke-direct {p0, v1, v2}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    const v3, true
+    if-eq v2, v3, :cond_2
+    const v4, 0
+    invoke-direct {p0, v1, v4}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    goto :goto_1
+    :cond_2
+    const v4, 1
+    invoke-direct {p0, v1, v4}, Lcom/android/internal/telephony/LGImsPhoneProxy$ImsPhoneIF;->notifyLteState(II)V
+    :goto_1
 
     .line 2241
     :cond_1

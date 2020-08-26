@@ -232,6 +232,9 @@
     .param p1, "out"    # Landroid/os/Parcel;
     .param p2, "flags"    # I
 
+    const v1, 0
+    const v2, 1
+
     .line 85
     iget v0, p0, Lcom/android/ims/LGImsECallConfig;->mSupportedIPCAN:I
 
@@ -240,17 +243,32 @@
     .line 86
     iget-boolean v0, p0, Lcom/android/ims/LGImsECallConfig;->mControlledByVoLteSetting:Z
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    if-eqz v0, :cond_0
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    goto :goto_0
+    :cond_0
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
+    :goto_0
 
     .line 87
     iget-boolean v0, p0, Lcom/android/ims/LGImsECallConfig;->mControlledByVoLteReg:Z
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    if-eqz v0, :cond_1
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    goto :goto_1
+    :cond_1
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
+    :goto_1
 
     .line 88
     iget-boolean v0, p0, Lcom/android/ims/LGImsECallConfig;->mNormalCallEndRequired:Z
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    if-eqz v0, :cond_2
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    goto :goto_2
+    :cond_2
+    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
+    :goto_2
 
     .line 89
     return-void

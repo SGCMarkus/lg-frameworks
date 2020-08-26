@@ -377,8 +377,16 @@
     .local v0, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
+    const v1, true
+    if-eq v0, v1, :cond_7
+    const v2, 0
     .line 507
-    invoke-virtual {v10, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v10, v2}, Landroid/os/Parcel;->writeInt(I)V
+    goto :goto_3
+    :cond_7
+    const v2, 1
+    invoke-virtual {v10, v2}, Landroid/os/Parcel;->writeInt(I)V
+    :goto_3
 
     .line 508
     return v12
